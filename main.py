@@ -21,12 +21,10 @@ CARD_NO = os.environ.get("CARD_NO")
 EXP_DATE = os.environ.get("EXP_DATE")
 CVV2 = os.environ.get("CVV2")
 
-print("hello")
 EMAIL = os.environ.get("EMAIL")
 PASSWORD = os.environ.get("PASSWORD")
 BOT_MAIL = os.environ.get("BOT_MAIL")
 BOT_MAIL_PASSWORD = os.environ.get("BOT_MAIL_PASSWORD")
-
 
 link1 = "https://www.vatanbilgisayar.com/msi-geforce-rtx-3050-aero-itx-8gb-gddr6-128bit-nvidia-ekran-karti.html"
 link2 = "https://www.vatanbilgisayar.com/msi-geforce-rtx-3050-ventus-2x-8gb-gddr6-128-bit-nvidia-ekran-karti.html"
@@ -35,11 +33,12 @@ link2 = "https://www.vatanbilgisayar.com/msi-geforce-rtx-3050-ventus-2x-8gb-gddr
 # link3 = "https://www.vatanbilgisayar.com/msi-geforce-gt1030-2ghd4-lp-oc-2gb-gddr5-64bit-nvidia-dx12-ekran-karti.html" test
 
 chrome_options = webdriver.ChromeOptions()
-# chrome_options.add_argument("--headless")
+chrome_options.add_argument("--headless")
+chrome_options.add_experimental_option("excludeSwitches", ["enable-logging"])
+# hosting
+# chrome_options.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
 # chrome_options.add_argument("--disable-dev-shm-usage")
 # chrome_options.add_argument("--no-sandbox")
-chrome_options.add_experimental_option("excludeSwitches", ["enable-logging"])
-# chrome_options.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
 
 driver = webdriver.Chrome(
     service=Service(ChromeDriverManager().install()), options=chrome_options)
@@ -139,6 +138,5 @@ password_input.send_keys(PASSWORD)
 # login button
 driver.find_element(By.ID, "login-button").click()
 time.sleep(1)
-
 
 check_stock()
