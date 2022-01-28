@@ -75,7 +75,7 @@ def check_stock(link):
         WebDriverWait(driver, 30).until(
             EC.presence_of_element_located((By.XPATH, "//button[@id='add-to-cart-button']")))
     except:
-        print("stok yok diger url deneniyor")
+        print(f"stok yok {link} diger url deneniyor")
         check_stock(links[0])
     else:
         print("stokta var")
