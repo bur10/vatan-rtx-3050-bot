@@ -29,9 +29,9 @@ BOT_MAIL_PASSWORD = os.environ.get("BOT_MAIL_PASSWORD")
 
 
 link1 = "https://www.vatanbilgisayar.com/msi-geforce-rtx-3050-aero-itx-8gb-gddr6-128bit-nvidia-ekran-karti.html"
-link2 = "https://www.vatanbilgisayar.com/mikado-md-bt54-siyah-desenli-bluetooth-usb-aux-tf-card-tasinabilir-speaker.html"
+link2 = "https://www.vatanbilgisayar.com/msi-geforce-rtx-3050-ventus-2x-8gb-gddr6-128-bit-nvidia-ekran-karti.html"
 # https://www.vatanbilgisayar.com/msi-geforce-rtx-3050-ventus-2x-8gb-gddr6-128-bit-nvidia-ekran-karti.html
-# https://www.vatanbilgisayar.com/mikado-md-bt54-siyah-desenli-bluetooth-usb-aux-tf-card-tasinabilir-speaker.html
+# https://www.vatanbilgisayar.com/mikado-md-bt54-siyah-desenli-bluetooth-usb-aux-tf-card-tasinabilir-speaker.html test
 # link3 = "https://www.vatanbilgisayar.com/msi-geforce-gt1030-2ghd4-lp-oc-2gb-gddr5-64bit-nvidia-dx12-ekran-karti.html" test
 
 chrome_options = webdriver.ChromeOptions()
